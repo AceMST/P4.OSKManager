@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSKManager", "OSKManager\OSKManager.csproj", "{E6D4E599-6AD8-446E-8CA9-B6241922CCBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6D4E599-6AD8-446E-8CA9-B6241922CCBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6D4E599-6AD8-446E-8CA9-B6241922CCBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6D4E599-6AD8-446E-8CA9-B6241922CCBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6D4E599-6AD8-446E-8CA9-B6241922CCBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36E9992B-7866-4678-92F3-12913A8B61DF}
+	EndGlobalSection
+EndGlobal

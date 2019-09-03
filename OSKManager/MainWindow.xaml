@@ -1,0 +1,186 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OSKManager"
+        xmlns:Properties="clr-namespace:OSKManager.Properties" x:Class="OSKManager.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="812" Background="#FF1C78B8">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1">
+
+            <Button Margin="10,10,10,5" FontSize="15" Content="Kursanci" Click="Button_Click" Name="Kursanci" >
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFB5D427" Offset="0"/>
+                        <GradientStop Color="#FF19CADC" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Margin="10,10,10,5" FontSize="15" Content="Pracownicy" Click="Button_Click_1" >
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFB5D427" Offset="0"/>
+                        <GradientStop Color="#FF19CADC" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button Margin="10,10,10,5" FontSize="15" Content="Pojazdy" Click="Button_Click_2" >
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFB5D427" Offset="0"/>
+                        <GradientStop Color="#FF19CADC" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+           
+            <Button Margin="10,10,10,5" FontSize="15" Content="Jazdy" Click="Button_Click_10" >
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFB5D427" Offset="0"/>
+                        <GradientStop Color="#FF19CADC" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Margin="10,10,10,5" FontSize="15" Content="Kursy" Click="Button_Click_9" >
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFB5D427" Offset="0"/>
+                        <GradientStop Color="#FF19CADC" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock FontSize="18" TextAlignment="Center" Foreground="WhiteSmoke"><Run Text="OSKManager"/></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <DataGrid x:Name="DataGrid1" AutoGenerateColumns="True" Height="344" Margin="0,0,10,0" SelectionChanged="DataGrid1_SelectionChanged"></DataGrid>
+        </StackPanel>
+        <DockPanel Grid.Row="2" Grid.Column="2">
+            <TextBlock FontSize="16" TextAlignment="Right"><Run Text="Strona głowna"/></TextBlock>
+
+        </DockPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <DockPanel >
+                <DockPanel.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFCDC69A"/>
+                        <GradientStop Color="#FF09ADC7" Offset="0.723"/>
+                    </RadialGradientBrush>
+                </DockPanel.Background>
+                <TextBlock>Dodaj/Usuń</TextBlock>
+                <ComboBox Margin="2" BorderBrush="#FF7FBCAC" >
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            <GradientStop Color="#FF217AB8" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                    <ComboBoxItem>
+                        <ComboBoxItem.Background>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#FFE3F52D" Offset="0"/>
+                                <GradientStop Color="#FF10A2B9" Offset="1"/>
+                            </RadialGradientBrush>
+                        </ComboBoxItem.Background>
+                        <Button Margin="0,1" FontSize="15" Content="Dodaj Kursanta" Width="122" Click="Button_Click_3">
+                            <Button.Background>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFE3F52D" Offset="0"/>
+                                    <GradientStop Color="#FF10A2B9" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </ComboBoxItem>
+                    <ComboBoxItem Background="#FF11A2B8">
+                        <Button Margin="0,1" FontSize="15" Content="Dodaj Pojazd" Width="122" Click="Button_Click_4" >
+                            <Button.Background>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFE3F52D" Offset="0"/>
+                                    <GradientStop Color="#FF10A2B9" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </ComboBoxItem>
+                    <ComboBoxItem Background="#FF11A2B8">
+                        <Button x:Name="Jazda" Margin="1" FontSize="15" Content="Dodaj Pracownika"   Width="122" Click="Button_Click_5">
+                            <Button.Background>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFE3F52D" Offset="0"/>
+                                    <GradientStop Color="#FF10A2B9" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </ComboBoxItem>
+                    <ComboBoxItem Background="#FF11A2B8">
+                        <Button Margin="1" FontSize="15" Content="Dodaj Jazdę"   Width="122" Click="Button_Click_11">
+                            <Button.Background>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFE3F52D" Offset="0"/>
+                                    <GradientStop Color="#FF10A2B9" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </ComboBoxItem>
+                    <ComboBoxItem Background="#FF11A2B8">
+                        <Button Margin="1" FontSize="15" Content="Usuń Kursanta"   Width="122" Click="Button_Click_6">
+                            <Button.Background>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFE3F52D" Offset="0"/>
+                                    <GradientStop Color="#FF10A2B9" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </ComboBoxItem>
+                    <ComboBoxItem Background="#FF11A2B8">
+                        <Button Margin="1" FontSize="15" Content="Usuń Pojazd"   Width="122" Click="Button_Click_7">
+                            <Button.Background>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFE3F52D" Offset="0"/>
+                                    <GradientStop Color="#FF10A2B9" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </ComboBoxItem>
+                    <ComboBoxItem Background="#FF11A2B8">
+                        <Button Margin="1" FontSize="15" Content="Usuń Pracownika"   Width="122" Click="Button_Click_8">
+                            <Button.Background>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFE3F52D" Offset="0"/>
+                                    <GradientStop Color="#FF10A2B9" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </ComboBoxItem>
+                    <ComboBoxItem Background="#FF11A2B8">
+                        <Button Margin="1" FontSize="15" Content="Usuń Jazdę" Width="122" Click="Button_Click_12">
+                            <Button.Background>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFE3F52D" Offset="0"/>
+                                    <GradientStop Color="#FF10A2B9" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </ComboBoxItem>
+                </ComboBox>
+            </DockPanel>
+        </StackPanel>
+
+    </Grid>
+
+</Window>

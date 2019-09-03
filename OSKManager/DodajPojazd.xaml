@@ -1,0 +1,32 @@
+﻿<Window x:Class="OSKManager.DodajPojazd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OSKManager"
+        mc:Ignorable="d"
+        Title="DodajPojazd" Height="251.612" Width="272.116" Background="#FF1C78B8">
+    <Grid>
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="113*" />
+                <ColumnDefinition Width="151*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <Label Margin="5">Numer rejestracyjny</Label>
+                <Label Margin="6">Model</Label>
+                <Label Margin="9">DataZakupu</Label>
+            </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBox x:Name="Rejestracja" Margin="10" TextChanged="Rejestracja_TextChanged"/>
+            <TextBox x:Name="Model" Margin="10" TextChanged="Model_TextChanged"/>
+            <TextBox x:Name="Zakup" Margin="10" TextChanged="Zakup_TextChanged"/>
+            <Button Margin="10" Height="33" Click="Button_Click">
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFE2E211" Offset="0"/>
+                        <GradientStop Color="#FF0C6BAC" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Background> Dodaj</Button>
+        </StackPanel>
+    </Grid>
+</Window>
